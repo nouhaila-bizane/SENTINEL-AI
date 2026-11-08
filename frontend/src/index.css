@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  background-color: #0B1120;
+  color: #F8FAFC;
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+* { box-sizing: border-box; }
+
+.glass-panel {
+  background: rgba(17, 28, 47, 0.6);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(36, 52, 77, 0.8);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #22D3EE 0%, #3B82F6 50%, #8B5CF6 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.grid-bg {
+  background-image:
+    linear-gradient(rgba(34, 211, 238, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(34, 211, 238, 0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.glow-cyan { box-shadow: 0 0 40px -10px rgba(34, 211, 238, 0.5); }
+.glow-purple { box-shadow: 0 0 40px -10px rgba(139, 92, 246, 0.5); }
+
+.scrollbar-thin::-webkit-scrollbar { width: 6px; height: 6px; }
+.scrollbar-thin::-webkit-scrollbar-track { background: transparent; }
+.scrollbar-thin::-webkit-scrollbar-thumb { background: #24344D; border-radius: 3px; }
+.scrollbar-thin::-webkit-scrollbar-thumb:hover { background: #3B82F6; }
+
+.auth-input {
+  width: 100%;
+  background: #0B1120;
+  border: 1px solid #24344D;
+  border-radius: 0.5rem;
+  padding: 0.625rem 0.875rem;
+  color: #F8FAFC;
+  font-size: 0.875rem;
+  transition: all 0.15s;
+}
+.auth-input:focus {
+  outline: none;
+  border-color: #22D3EE;
+  box-shadow: 0 0 0 3px rgba(34, 211, 238, 0.15);
+}
+.auth-input::placeholder { color: rgba(148, 163, 184, 0.5); }
